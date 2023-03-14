@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useContext, useEffect, useRef, useState } from "react";
 import 'cropperjs/dist/cropper.css';
 import Cropper from 'react-cropper';
-import InputError from "../../inputs/inputError";
+
 import { uploadImage } from "../../../lib/cloudinary";
 import { auth } from "../../../lib/firebase";
 import { useMutation, useQueryClient } from "react-query";
@@ -13,6 +13,7 @@ import { BASE_URL } from "../../../helper/base_url";
 import { KEY_USER } from "../../../helper/query_keys";
 import { AuthContext } from "../../../context/authContext";
 import axios from "axios";
+import InputError from "../../inputs/inputError";
 
 
 export default function LayoutRegister() {
@@ -44,10 +45,10 @@ export default function LayoutRegister() {
 // }
 
 
-const [image, setImage] = useState(null);
-const [croppedImagen, setCroppedImagen] = useState(null);
-const [cropperReady, setCropperReady] = useState(false);
-const cropperRef = useRef(null)
+// const [image, setImage] = useState(null);
+// const [croppedImagen, setCroppedImagen] = useState(null);
+// const [cropperReady, setCropperReady] = useState(false);
+// const cropperRef = useRef(null)
 
 // const handleFileChange = (event) => {
 //   const file = event.target.files[0];
