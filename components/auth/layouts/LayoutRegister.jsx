@@ -13,7 +13,7 @@ import { BASE_URL } from "../../../helper/base_url";
 import { KEY_USER } from "../../../helper/query_keys";
 import { AuthContext } from "../../../context/authContext";
 import axios from "axios";
-import InputError from "../../inputs/inputError";
+import InputError from "../../inputs/InputError";
 
 
 export default function LayoutRegister() {
