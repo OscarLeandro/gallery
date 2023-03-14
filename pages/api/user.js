@@ -9,7 +9,7 @@ export default async function handler(req, res) {
       return response.json();
     }
     try {
-      const data = await getUsers("http://localhost:8000/api/user");
+      const data = await getUsers("https://gallery-back.vercel.app/api/user");
       res.status(200).json(data);
     } catch (error) {
       console.log(error);
@@ -29,7 +29,7 @@ export default async function handler(req, res) {
       return response.json();
     }
     try {
-      const data = await postUser("http://localhost:8000/api/user", req.body);
+      const data = await postUser("https://gallery-back.vercel.app/api/user", req.body);
       res.status(201).json(data);
     } catch (error) {
       console.log(error);
@@ -50,7 +50,7 @@ export default async function handler(req, res) {
     }
     try {
       const data = await putUser(
-        `http://localhost:8000/api/user/${req.body.id}`,
+        `https://gallery-back.vercel.app/api/user/${req.body.id}`,
         req.body
       );
       //console.log('post data',data);
@@ -72,7 +72,7 @@ export default async function handler(req, res) {
     }
     try {
       const data = await addPhotoToUser(
-        `http://localhost:8000/api/user/photo/${req.body.userId}`, req.body);
+        `https://gallery-back.vercel.app/api/user/photo/${req.body.userId}`, req.body);
 
       console.log('patch data',data);
       res.status(201).json(data);

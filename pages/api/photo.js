@@ -9,7 +9,7 @@ export default async function handler(req, res) {
       return response.json();
     }
     try {
-      const data = await getPhoto("http://localhost:8000/api/photo");
+      const data = await getPhoto("https://gallery-back.vercel.app/api/photo");
       res.status(200).json(data);
     } catch (error) {
       console.log(error);
@@ -27,7 +27,7 @@ export default async function handler(req, res) {
       return response.json();
     }
     try {
-      const data = await postPhoto("http://localhost:8000/api/user/photo/", req.body);
+      const data = await postPhoto("https://gallery-back.vercel.app/api/user/photo/", req.body);
       res.status(200).json(data);
     } catch (error) {
       console.log(error);
